@@ -1,0 +1,273 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ↓ここにコードを追加 */
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+li {
+  margin: 100px 100px 100px 0;
+
+}
+
+a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first,
+.second,
+.forth,
+.fifth,
+.sixth {
+  width: 300px;
+  height: 80px;
+}
+
+.first a {
+  font-family: fantasy;
+  font-size: 50px;
+  border-radius: 30px;
+  background-color: rgb(243, 122, 36);
+  color: rgb(104, 32, 170);
+  border-radius: 30px;
+}
+
+.first a:hover {
+  background-color: mediumseagreen;
+  color: rgb(243, 122, 36);
+  transition: all 300ms ease-out;
+  border: 5px solid rgb(243, 122, 36);
+}
+
+.second {
+  background: #151348;
+  border: 10px double burlywood;
+  border-radius: 10px;
+}
+
+.second a {
+  font-family: "Monomaniac One", sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  color: rgb(109, 109, 26);
+}
+
+.second a span {
+  color: #121040;
+  font-size: 50px;
+}
+
+.second a:hover {
+  color: rgb(255, 255, 13);
+  background: rgba(250, 245, 245, 0.3);
+}
+
+.third {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(1, 61, 117);
+  border-radius: 50%;
+}
+
+.third a {
+  color: rgba(228, 228, 228, 0);
+  font-size: 40px;
+  font-family: "Darumadrop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.third a:hover {
+  transform: scale(1.2);
+  transition: background-color 0.6s ease-in 0.1s;
+  color: rgba(228, 228, 228, 0.9)
+}
+
+.third:hover {
+  border: 10px solid rgba(228, 228, 228, 0.9);
+  transition: all 0.5s ease 0s;
+}
+
+.forth {
+  background-color: rgba(71, 121, 48, 0.3);
+  border-radius: 50%;
+}
+
+.forth a {
+  background-color: rgb(71, 70, 69);
+  color: rgb(176, 151, 97);
+  transform: scale(0.8);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  border-radius: 50%;
+}
+
+.forth a:hover {
+  transform: scale(1);
+  color: rgb(211, 181, 117);
+  transition: all 0.5s ease-out 0.1s;
+}
+
+.fifth a {
+  background-color: rgb(221, 219, 208);
+  position: relative;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 40px;
+  font-style: italic;
+  color: rgb(216, 84, 39);
+}
+
+.fifth a::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  border: 2px dotted rgb(48, 48, 48);
+  width: 100%;
+  height: 100%;
+}
+
+.fifth a:hover {
+  background-color: rgb(200, 198, 225);
+
+}
+
+.fifth a:hover::before {
+  transform: translate(-10px, 10px);
+}
+
+.sixth a {
+  background-color: rgb(217, 236, 244);
+  transform: skewX(-10deg);
+  transform-origin: bottom;
+  color: rgb(17, 129, 191);
+  font-size: 30px;
+  position: relative;
+}
+
+.sixth a::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  border: 2px solid rgb(118, 119, 120);
+  width: 100%;
+  height: 100%;
+}
+
+.sixth a:hover::before {
+  transform: translate(10px, 0);
+}
+
+.sixth a:hover {
+  background-color: rgb(87, 184, 227);
+
+}
+
+.seventh {
+  width: 150px;
+  height: 150px;
+  background: rgb(106, 228, 58);
+}
+
+.seventh a {
+  background-color: rgb(255, 255, 40);
+  transform: rotate(30deg);
+  transform-origin: right bottom;
+  color: rgb(255, 136, 0);
+  font-weight: bold;
+  font-size: 40px;
+}
+
+
+@keyframes coroncoron {
+  0% {
+    transform: rotate(20deg);
+    transform-origin: right bottom;
+  }
+
+  25% {
+    transform: rotate(10deg);
+    transform-origin: right bottom;
+  }
+
+  75% {
+    transform: rotate(-20deg);
+    transform-origin: right bottom;
+  }
+
+  100% {
+    transform: rotate(0);
+    transform-origin: right bottom;
+  }
+}
+
+.seventh a:hover {
+  animation-name: coroncoron;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  color: rgb(255, 102, 0);
+}
+
+.eighth a {
+  background-color: cornsilk;
+  width: 150px;
+  height: 150px;
+  border-radius: 5%;
+  font-family: "Lilita One", sans-serif;
+  font-size: 50px;
+  color: gray;
+}
+
+.eighth a:hover {
+  border-radius: 50%;
+  background-color: rgb(255, 214, 198);
+  color: rgb(185, 181, 181);
+  transition: all 1s ease 0.2s;
+}
+
+.ninth {
+  width: 160px;
+  height: 160px;
+  background-color: rgba(174, 240, 204, 0.877);
+  border-radius: 50%;
+  transform: scale(0.8);
+}
+
+.ninth a {
+  transform: scale(1.2);
+  border-radius: 50%;
+  border: 2px solid rgba(31, 200, 212, 0.459);
+  color: rgb(55, 183, 241);
+  font-size: 40px;
+  font-family: "Bad Script", cursive;
+}
+
+.ninth a:hover {
+  transform: scale(0.9);
+  color: rgb(137, 207, 240);
+  transition: all 1s ease 0.2s;
+}
+
+.ninth:hover {
+  transform: scale(1);
+  transition: all 1s ease 0.5s;
+}
+
+
+/* ↑ここにコードを追加 */
