@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/stylesheet..css">
+  <title>お問い合わせ</title>
+</head>
+
+<body>
+  <h1>お問い合わせフォーム</h1>
+  <form action="" method="post">
+    <p class="nyuryoku">以下のフォームよりお問い合わせ内容をご入力ください。</p>
+    <div>
+      <p class="category"><span class="hissu">必須</span>
+        お問い合わせ種別</p>
+      <p class="kaitou"><select name="type">
+          <option value="選択してください">選択してください</option>
+          <option value="お褒めの言葉">お褒めの言葉</option>
+        </select> </p>
+    </div>
+    <div>
+      <p class="category"><span class="nini">任意</span>注文番号</p>
+      <p class="kaitou"> <input type="text" name="orderNumber"></p>
+    </div>
+    <div>
+      <p class="category"><span class="hissu">必須</span>お名前</p>
+      <p class="kaitou"><input type="text" name="userName"></p>
+    </div>
+    <div>
+      <p class="category"><span class="hissu">必須</span>メールアドレス</p>
+      <p class="kaitou"><input type="email" name="userEmail"> </p>
+    </div>
+    <div>
+      <p class="category"><span class="hissu">必須</span>メールアドレス&#40;確認用&#41;</p>
+      <p class="kaitou"><input type="email" name="kakuninEmail"> </p>
+    </div>
+    <div>
+      <p class="category"><span class="hissu">必須</span>内容</p>
+      <p class="kaitou"><textarea name="naiyo"></textarea></p>
+    </div>
+    <p class="send"><input type="submit" value="確認"></p>
+  </form>
+</body>
+
+</html>

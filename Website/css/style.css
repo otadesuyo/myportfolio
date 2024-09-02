@@ -1,0 +1,927 @@
+@charset "utf-8";
+
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  color: #333;
+  background: #fff;
+}
+
+.inner_wrap {
+  margin: 0 12px;
+}
+
+p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+h2,
+h3,
+form,
+ol {
+  text-align: center;
+}
+
+
+/* ここら辺真ん中配置のものが多いから、aligncenterしちゃえ */
+
+.cont_concept,
+.cont_contact,
+.cont_flow,
+.cont_qa,
+.cont_service {
+  margin-bottom: 80px;
+}
+
+h2 {
+  font-size: 28px;
+  font-family: 'Noto Serif JP';
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+h2 span {
+  font-size: 12px;
+  position: relative;
+  color: #223E69;
+  display: inline-block;
+}
+
+h2 span::before,
+h2 span::after {
+  content: "";
+  background-color: #223E69;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  width: 60.5px;
+  height: 1px;
+  margin: 0 8px;
+}
+
+h2 span::before {
+  right: 100%;
+}
+
+h2 span::after {
+  left: 100%;
+}
+
+
+h3 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/* ☝までが共通 */
+
+/* header */
+header {
+  padding: 16px 12px;
+}
+
+/*header内　 gmenu */
+.g_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+
+}
+
+.menu_button {
+  display: none;
+}
+
+.menu_icon {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  height: 20px;
+  cursor: pointer;
+  padding-top: 10px;
+
+}
+
+.navicon {
+  display: block;
+  width: 31px;
+  height: 2px;
+  background-color: #B71B26;
+  position: relative;
+}
+
+.navicon::after,
+.navicon::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #B71B26;
+  position: absolute;
+  transition: all 0.5s ease-out;
+}
+
+.navicon::after {
+  top: -10px;
+}
+
+.navicon::before {
+  top: 10px;
+}
+
+.menu {
+  background-color: #ffffff59;
+  text-align: center;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s;
+
+}
+
+.menu li {
+  font-size: 16px;
+  font-family: "noto serif JP";
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.menu li:nth-child(1) {
+  padding-top: 80px;
+}
+
+.menu li:nth-child(5) {
+  margin-bottom: 180px;
+}
+
+.menu a {
+  display: block;
+  padding: 24px;
+  color: #333;
+}
+
+
+
+.menu_button:checked~.menu {
+  max-height: 100%;
+  transition: max-height 0.5s;
+}
+
+.menu_button:checked~.menu_icon .navicon {
+  background: transparent;
+}
+
+.menu_button:checked~.menu_icon .navicon::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.menu_button:checked~.menu_icon .navicon::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* ↓main */
+
+/* hero画像 */
+.hero {
+  height: 480px;
+  width: 100%;
+  background: url(../images/main_hero.jpg) no-repeat center top/cover;
+  display: inline-block;
+}
+
+
+
+header h1 {
+  font-size: 0;
+}
+
+/* cont_concep */
+.cont_concept h2 {
+  margin-top: 48px;
+}
+
+.cont_concept h3 {
+  margin-bottom: 16px;
+}
+
+/* cont_service */
+.cont_service img {
+  width: 100%;
+}
+
+.cont_service h3 {
+  font-family: 'Noto serif JP';
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.cont_service p {
+  line-height: 1.5em;
+}
+
+.cont_service p:nth-of-type(3) {
+  text-align: right;
+}
+
+.service_list section {
+  margin-bottom: 48px;
+}
+
+
+
+.cont_service p:nth-of-type(3) a::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-left-color: #333;
+  margin-left: 4px;
+}
+
+/* cont_flow */
+.cont_flow {
+  background: #223E6905;
+}
+
+.cont_flow h2 {
+  margin-bottom: 24px;
+  padding-top: 16px;
+}
+
+.cont_flow h2 span {
+  color: #B71B26;
+}
+
+.cont_flow h2 span::after,
+.cont_flow h2 span::before {
+  background-color: #B71B26;
+}
+
+.cont_flow ol {
+  padding-bottom: 16px;
+}
+
+.cont_flow ol li {
+  margin: 0 auto;
+  margin-bottom: 8px;
+}
+
+.cont_flow ol li:nth-child(2n+1) {
+  font-size: 16px;
+  display: block;
+  background-color: #333;
+  color: #fff;
+  border-radius: 32px;
+  width: 300px;
+  position: relative;
+}
+
+ol li:nth-child(2n) {
+  width: 32px;
+  height: 16px;
+  border-top: 16px solid #B71B26;
+  border-right: 16px solid transparent;
+  border-left: 16px solid transparent;
+}
+
+.cont_flow ol li:nth-child(6) {
+  margin-bottom: 16px;
+}
+
+/* あ～、たぶん、もっとスマートな感じのやり方があると思うんだが～ */
+
+/* すごく面倒なグラデづくり */
+.cont_flow ol li:nth-child(2) {
+  border-top-color: #B71B2699
+}
+
+.cont_flow ol li:nth-child(4) {
+  border-top-color: #B71B26B3;
+}
+
+.cont_flow ol li:nth-child(6) {
+  border-top-color: #B71B26CC;
+}
+
+.cont_flow ol li:nth-child(8) {
+  border-top-color: #b71b26E6;
+}
+
+
+
+/* cont_qa */
+.cont_qa dl {
+
+
+  margin-bottom: 24px;
+
+}
+
+dl div {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.cont_qa dt {
+  font-size: 20px;
+  color: #fff;
+  font-family: "noto serif JP";
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  letter-spacing: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.cont_qa .question {
+  background-color: #333;
+}
+
+.cont_qa .answer {
+  background-color: #B71B26;
+}
+
+
+.cont_qa dd {
+  flex-basis: 89%;
+  line-height: 1.5em;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+/* cont_contact */
+.cont_contact {
+  background-color: #223e6926;
+  margin-bottom: 126px;
+}
+
+
+
+/* RGBAで透過すればよかったぽい.
+  16進数変換ね*/
+
+.cont_contact h2 {
+  padding-top: 16px;
+}
+
+.cont_contact h2 span {
+  color: #333;
+}
+
+.cont_contact h2 span::after,
+.cont_contact h2 span::before {
+  background-color: #333;
+}
+
+.cont_contact p {
+  font-weight: bold;
+}
+
+.cont_contact p span {
+  color: #fff;
+  font-size: 10px;
+  line-height: 1;
+  background: #B71B26;
+  padding: 4px 9.5px;
+  border-radius: 8px;
+  margin-left: 4px;
+}
+
+label {
+  font-weight: 400;
+}
+
+.blank {
+  margin-right: 40px;
+}
+
+/* radioボタンづくり */
+input[type="radio"] {
+  margin-right: 4px;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  vertical-align: middle;
+}
+
+input[type="radio"]:checked::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #223E69;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 8px;
+  padding: 4px;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="email"] {
+  height: 32px;
+}
+
+textarea {
+  height: 120px;
+}
+
+input[name="adress_number"] {
+  width: 35%;
+}
+
+.adress_number {
+  text-align: left;
+}
+
+
+input[type="submit"] {
+  font-family: "noto serif JP";
+  color: #fff;
+  font-weight: bold;
+  background: #333;
+  padding: 16px 16.5px;
+  margin: 24px 0;
+}
+
+.submit_arrow {
+  display: inline-block;
+  position: relative;
+}
+
+.submit_arrow::after {
+  content: "";
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border: 6px solid transparent;
+  border-left-color: #fff;
+  position: absolute;
+  display: inline-block;
+  top: 44%;
+  right: 2%;
+  /*help矢印の作製はできたけど、調整おわってる(^^♪ */
+}
+
+/* footer */
+footer {
+  background-color: #333;
+}
+
+footer small {
+  display: block;
+  /* small指定したはいいものの、インラインだったからしゃーなし。 */
+  text-align: center;
+  font-family: "Noto serif JP";
+  color: #fff;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+footer p {
+  margin: 0;
+  position: relative;
+
+}
+
+footer p a {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  background-color: #333;
+  position: absolute;
+  bottom: 0px;
+  right: 12px;
+}
+
+footer p a::after {
+  content: "";
+  width: 23px;
+  height: 23px;
+  border-right: #fff solid 2px;
+  border-top: #fff solid 2px;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 20px;
+  left: 12px;
+}
+
+@media screen and (min-width:768px) {
+
+  /* navをどうにかする */
+
+  header {
+    display: flex;
+    padding: 24px;
+    justify-content: space-between;
+  }
+
+  h1 img {
+    width: 29vw;
+  }
+
+  .g_menu {
+    position: static;
+    flex-basis: 48%;
+  }
+
+  .menu {
+    max-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 32px;
+  }
+
+  .menu li {
+    white-space: nowrap;
+    flex-basis: 20%;
+    height: 100%;
+  }
+
+  /* .menu li:nth-child(-n+4) {
+    padding: 0 4%;
+  } */
+
+  .menu li:nth-child(1) {
+    padding-top: 0px;
+  }
+
+  .menu li:nth-child(5) {
+    margin-bottom: 0px;
+  }
+
+
+  .menu li a {
+    padding: 0px;
+    display: block;
+    font-size: 1.1vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .menu li:nth-child(-n+4) a {
+    padding: 0 2vw;
+  }
+
+  .menu li a:hover {
+    background-color: #223e690c;
+    text-decoration: underline solid 1px #B71B26;
+  }
+
+  .g_menu {
+    position: static;
+  }
+
+  .navicon {
+    display: none;
+  }
+
+  /* hero画像*/
+  .hero {
+    background: url(../images/pc_main_hero.jpg) no-repeat center top/cover;
+    height: 595px;
+  }
+
+  /* h2とかのフォント調節 、マージンも・・・*/
+  body {
+    font-size: 16px;
+  }
+
+  .cont_concept,
+  .cont_contact,
+  .cont_flow,
+  .cont_qa,
+  .cont_service {
+    margin-bottom: 160px;
+  }
+
+  h2 {
+    font-size: 42px;
+    margin-bottom: 48px
+  }
+
+  h2 span {
+    font-size: 16px;
+  }
+
+
+  h3 {
+    font-size: 28px;
+  }
+
+  /* inner-wrap の調整*/
+  .inner_wrap {
+    width: 75%;
+    /* 可変幅って、どのくらいまで頑張るんじゃ・・・？*/
+    margin: 0 auto;
+  }
+
+  /* cont_concept*/
+  .cont_concept h2 {
+    margin-top: 160px;
+  }
+
+
+
+  /* service_list */
+  .service_list h3 {
+    font-size: 24px;
+  }
+
+  /* サービスリストを横並びにする */
+  .cont_service .service_list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cont_service .service_list section {
+    flex-basis: 30%;
+  }
+
+  .cont_service .service_list p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  /* moreのホバー */
+  .cont_service a:hover,
+  .cont_service p:nth-of-type(3) a:hover::after {
+    color: #33333393;
+
+  }
+
+  .cont_service p:nth-of-type(3) a:hover::after {
+    border-left-color: #33333393;
+    transform: translateX(10px);
+  }
+
+  /* cont_flow */
+  /* flowも横並びに、テキストは縦 */
+
+  .cont_flow h2 {
+    padding-top: 48px;
+    margin-bottom: 48px;
+  }
+
+  .cont_flow ol {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 48px;
+  }
+
+  .cont_flow ol li:nth-child(2n+1) {
+    flex-basis: 60px;
+    height: 280px;
+    font-size: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    line-height: 1;
+    margin: 0;
+  }
+
+  .cont_flow ol li:nth-child(2n) {
+    border-left: 30px solid #B71B26;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    align-self: center;
+    transform: translateX(10px);
+  }
+
+  /* すごく面倒なグラデづくり */
+  .cont_flow ol li:nth-child(2) {
+    border-left-color: #B71B2699
+  }
+
+  .cont_flow ol li:nth-child(4) {
+    border-left-color: #B71B26B3;
+  }
+
+  .cont_flow ol li:nth-child(6) {
+    border-left-color: #B71B26CC;
+  }
+
+  .cont_flow ol li:nth-child(8) {
+    border-left-color: #b71b26E6;
+  }
+
+  /* cont_qa */
+
+
+  .cont_qa dl {
+    margin-bottom: 48px;
+  }
+
+  .cont_qa dd {
+    font-size: 20px;
+  }
+
+  .cont_qa dt {
+    font-size: 34px;
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  /* cont_contact */
+  .cont_contact {
+    padding-bottom: 48px;
+  }
+
+  .cont_contact form {
+    background: #ffffff80;
+    padding-top: 48px;
+  }
+
+  .cont_contact .inner_wrap form {
+    margin: 0 24px;
+    text-align: left;
+  }
+
+
+  .cont_contact h2 {
+    padding-top: 48px;
+  }
+
+  .cont_contact p {
+    margin-bottom: 24px;
+  }
+
+  .komoku {
+    display: flex;
+    font-size: 1.45vw;
+  }
+
+
+  .toi {
+    text-align: right;
+    flex-basis: 35%;
+    padding-right: 12px;
+  }
+
+
+  .cont_contact p span {
+    font-size: 16px;
+    display: inline-block;
+  }
+
+  .kaitou {
+    flex-basis: 65%;
+    margin-right: 24px;
+  }
+
+  /* radioボタンの調整 */
+  input[type="radio"] {
+    width: 24px;
+    height: 24px;
+  }
+
+  input[type="radio"]:checked::after {
+    content: "";
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: #223E69;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    height: 52px;
+  }
+
+  .kaitou input[type="text"] {
+    width: 50%;
+  }
+
+  .kaitou input[name="adress_number"] {
+    width: 33%;
+  }
+
+  .kaitou input[ name="adress"] {
+    width: 100%;
+  }
+
+  textarea {
+    height: 208px;
+  }
+
+  .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  input[type="submit"] {
+    padding: 24px 43px;
+    font-size: 20px;
+    margin: 48px 0;
+  }
+
+
+  .submit_arrow::after {
+    border: 9.5px solid transparent;
+    border-left-color: #fff;
+    position: absolute;
+    display: inline-block;
+    top: 46%;
+    right: 8%;
+  }
+
+  /* radioボタンにカーソル乗せたとき */
+  .komoku .kaitou label,
+  input[type=radio] {
+    cursor: pointer;
+  }
+
+  /* inputのホバー */
+  input[type="submit"]:hover {
+    background: #223E69;
+    transform: scale(1.2);
+    transition: all 0.4s ease-in;
+  }
+
+  .submit_arrow:hover::after {
+    transform: translate(20px);
+    transition: all 0.4s ease-in;
+  }
+
+  /* footer*/
+  footer {
+    margin-top: 220px;
+    /* 160＋⇑アイコンの高さ60 
+    もっとスマートなやり方がありそうだが、検討つかず*/
+  }
+
+
+  footer p a {
+    width: 60px;
+    height: 60px;
+    margin-top: 160px;
+  }
+
+  footer p a::after {
+    top: 22px;
+    left: 20px;
+  }
+
+  footer p a:hover {
+    border-radius: 50%;
+    background-color: #223e697c;
+    transform: translateY(-20px);
+    transition: all 0.4s ease-in;
+  }
+
+
+
+}
+
+
+/*固定幅 */
+@media screen and (min-width:1140px) {
+
+
+  .inner_wrap {
+    width: 1020px;
+    margin: auto;
+  }
+}

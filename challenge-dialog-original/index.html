@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>dialog-alert</title>
+</head>
+
+<body>
+  <main>
+    <div class="innerWrap">
+      <p>1から10までの数字を入力して確認ボタンを押してください。</p>
+      <form action="#" id="form">
+        <input type="text" name="number">
+        <input type="submit" value="確認">
+      </form>
+      <!-- ダイアログ要素を使うと意味のあるマークアップになれるので、ダイアログを作りたい時は使おう。 -->
+      <dialog id="alert">
+        <p id="result"></p>
+        <button id="ok">OK</button>
+      </dialog>
+    </div>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

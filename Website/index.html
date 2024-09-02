@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Design House Renovations</title>
+</head>
+
+<body>
+  <header>
+    <h1><img src="images/header_logo.svg" alt="Design House Renovations"></h1>
+    <nav class="g_menu">
+      <!-- checkでメニューが開けるようにする -->
+      <input type="checkbox" id="menu_button" class="menu_button">
+      <!--inputにid属性を設定し、label要素のfor属性でinput要素のidを指定する。または組み合わせたいinput要素をlabel要素のタグで囲む。 -->
+      <label for="menu_button" class="menu_icon">
+        <span class="navicon"></span></label>
+      <ul class="menu">
+        <li><a href="#area_concept">コンセプト</a></li>
+        <li><a href="#area_service">サービス</a></li>
+        <li><a href="#area_flow">施工の流れ</a></li>
+        <li><a href="#area_qa">よくあるご質問</a></li>
+        <li><a href="#area_contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="hero">
+      <p></p>
+    </div>
+    <section class="cont_concept" id="area_concept">
+      <div class="inner_wrap">
+        <h2>concept <br>
+          <span>コンセプト</span>
+        </h2>
+        <h3>家族が笑顔になれる場所</h3>
+        <p>家族が集う、温かく居心地の良い空間づくりを目指して、幅広い年代の方に安心して過ごしていただける空間づくりや、お手入れのしやすい素材を使用したリフォームをご提案いたします。</p>
+      </div>
+    </section>
+    <section class="cont_service" id="area_service">
+      <div class="inner_wrap">
+        <h2>
+          service <br>
+          <span>サービス</span>
+        </h2>
+        <div class="service_list">
+          <section class="list1">
+            <p><img src="images/list_1_img.jpg" alt="浴室"></p>
+            <h3>浴室</h3>
+            <p>ご家族が一緒に入れる広めの浴槽や手すり等、安全性に配慮しています。</p>
+            <p><a href="">more</a></p>
+          </section>
+          <section class="list2">
+            <p><img src="images/list_2_img.jpg" alt="リビング"></p>
+            <h3>リビング</h3>
+            <p>
+              照明や家具の配置等、くつろぎやすい空間づくりを大切にしています。
+            </p>
+            <p><a href="">more</a></p>
+          </section>
+          <section class="list3">
+            <p><img src="images/list_3_img.jpg" alt="キッチン"></p>
+            <h3>キッチン</h3>
+            <p>機能性だけでなく、デザイン性にもこだわっております。</p>
+            <p><a href="">more</a></p>
+          </section>
+        </div>
+      </div>
+    </section>
+    <section class="cont_flow" id="area_flow">
+      <div class="inner_wrap">
+        <h2>
+          flow <br>
+          <span>施工の流れ</span>
+        </h2>
+        <ol>
+          <li>ご相談</li>
+          <li></li>
+          <li>現地調査</li>
+          <li></li>
+          <li>お見積り</li>
+          <li></li>
+          <li>ご契約</li>
+          <li></li>
+          <li>施工</li>
+          <li></li>
+          <li>お引渡し</li>
+        </ol>
+      </div>
+    </section>
+    <section class="cont_qa" id="area_qa">
+      <div class="inner_wrap">
+        <h2>
+          q&amp;a<br>
+          <span>よくあるご質問</span>
+        </h2>
+        <dl class="omitumori">
+          <div>
+            <dt class="question">Q.</dt>
+            <dd>見積りは無料ですか&#63;</dd>
+          </div>
+          <div>
+            <dt class="answer">A.</dt>
+            <dd>はい。お見積りは無料で承っております。ホームページよりお気軽にお問い合わせください。</dd>
+          </div>
+        </dl>
+        <dl class="hudandori">
+          <div>
+            <dt class="question">Q.</dt>
+            <dd>普段通り生活をしながらのリフォーム工事は可能ですか&#63;</dd>
+          </div>
+          <div>
+            <dt class="answer">A.</dt>
+            <dd>はい。もちろん可能です。工事中の箇所は、何日間か使用できなくなる場合もございますのであらかじめご了承ください。大型リフォームの場合には、仮住まいもお薦めしております。</dd>
+          </div>
+        </dl>
+
+
+      </div>
+    </section>
+    <section class="cont_contact" id="area_contact">
+      <div class="inner_wrap">
+        <h2>contact <br>
+          <span>お問い合わせ</span>
+        </h2>
+        <form>
+          <div class="komoku">
+            <p class="toi">お問い合わせ種別<span>必須</span></p>
+            <p class="kaitou">
+              <label class="blank"><input type="radio" name="type" value="資料請求">資料請求</label>
+              <label><input type="radio" name="type" value="ご相談">ご相談
+              </label>
+            </p>
+          </div>
+          <div class="komoku">
+            <p class="toi">お名前<span>必須</span></p>
+            <p class="kaitou"><input type="text" name="user_name"></p>
+          </div>
+          <div class="komoku">
+            <p class="toi">フリガナ<span>必須</span></p>
+            <p class="kaitou"><input type="text" name="user_name_katakana"></p>
+          </div>
+          <div class="komoku">
+            <p class="toi">電話番号<span>必須</span></p>
+            <p class="kaitou"><input type="text" name="user_tel"></p>
+          </div>
+          <div class="komoku">
+            <p class="toi">住所<span>必須</span></p>
+            <div class="kaitou">
+              <p class="adress_number">〒<input type="text" name="adress_number"></p>
+              <p><input type="text" name="adress"></p>
+            </div>
+          </div>
+          <div class="komoku">
+            <p class="toi">メールアドレス<span>必須</span></p>
+            <p class="kaitou"><input type="email" name="user_mail"></p>
+          </div>
+          <div class="komoku">
+            <p class="toi">メールアドレス(確認用)<span>必須</span></p>
+            <p class="kaitou"><input type="email" name="user_mail_2"></p>
+          </div>
+          <div class="komoku">
+            <p class="toi">お問い合わせ内容</p>
+            <textarea name="message" class="kaitou"></textarea>
+          </div>
+          <div class="wrap">
+            <div class="submit_arrow"><input type="submit" value="入力内容を確認する"></div>
+          </div>
+
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <div class="inner_wrap">
+      <p><a href="#"></a></p>
+      <small>&copy; Design House Renovations </small>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

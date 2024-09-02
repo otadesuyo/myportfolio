@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+/* スマホ用 */
+
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  font-size: 18px;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+p {
+  margin: 0;
+  width: 100%;
+  line-height: 2em;
+}
+
+
+.category {
+  background: rgb(220, 220, 247);
+  border: 1px solid rgb(139, 139, 238);
+  padding: 5px;
+}
+
+.kaitou {
+  border: 1px solid rgb(139, 139, 238);
+  background: #fff;
+  padding: 10px;
+}
+
+span {
+  color: #fff;
+  margin: 5px;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.nini {
+  background: rgb(166, 180, 189);
+}
+
+.hissu {
+  background: rgb(255, 13, 65);
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  border: 1px rgb(87, 87, 87) solid;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(87, 87, 87, 0.5) inset;
+  padding: 5px;
+  display: block;
+}
+
+
+textarea {
+  height: 200px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.send {
+  width: 100%;
+  text-align: right;
+}
+
+input[type="submit"] {
+  background-color: rgb(255, 13, 65);
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 10px 50px;
+  margin-top: 10px;
+}
+
+@media screen and (min-width:640px) {
+
+  form {
+    font-size: 16px;
+  }
+
+  div {
+    display: flex;
+  }
+
+  .category {
+    width: 50%;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select {
+    width: 60%;
+    display: inline;
+  }
+
+  textarea {
+    width: 100%;
+    margin: 0;
+  }
+
+  input[type="submit"]:hover {
+    background-color: rgb(214, 94, 120);
+    color: rgb(148, 0, 32);
+  }
+}
+
+@media screen and (min-width:800px) {
+  form {
+    width: 800px;
+  }
+}

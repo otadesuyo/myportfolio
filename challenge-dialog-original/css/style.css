@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+p,
+form {
+  text-align: center;
+}
+
+dialog {
+  display: none;
+}
+
+dialog {
+  border: none;
+  width: 500px;
+  height: 130px;
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  border-radius: 5px;
+  box-shadow: rgba(128, 128, 128, 0.582) 0px 5px 5px;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 70% 30%;
+  visibility: hidden
+}
+
+#result {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  text-align: left;
+}
+
+button {
+  background-color: black;
+  color: #fff;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  position: relative;
+  outline: #fff 1px solid;
+  outline-offset: -3px;
+  border-radius: 10%;
+}
